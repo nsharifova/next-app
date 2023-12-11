@@ -1,4 +1,8 @@
+"use client"
+import { Footer, Header } from '@/shared/components'
 import './globals.css'
+import './globals.scss'
+
 
 export default function RootLayout({
   children,
@@ -7,12 +11,25 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      {/*
-        <head /> will contain the components returned by the nearest parent
-        head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
-      */}
-      <head />
-      <body>{children}</body>
-    </html>
+        <head>
+            <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
+            <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
+            <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
+            <link rel="manifest" href="/site.webmanifest"/>
+            <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"/>
+            <meta name="msapplication-TileColor" content="#da532c"/>
+            <meta name="theme-color" content="#ffffff"/>
+            <title>Next App</title>
+        </head>
+        <body>
+        <Header />
+        <div className='w-100 bodyMain'>
+
+        {children}
+        </div>
+        <Footer/>
+        </body>
+        </html>
+
   )
 }

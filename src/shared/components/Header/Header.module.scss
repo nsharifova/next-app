@@ -1,0 +1,33 @@
+.Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100px;
+  width: 100%;
+  padding: 20px 100px;
+  background: antiquewhite;
+  &Right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    div {
+      padding: 0 20px;
+    }
+  }
+  &Center {
+    ul {
+      margin: 0px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      li {
+        list-style: none;
+        padding: 0 35px;
+      }
+    }
+  }
+  &Left {
+    display: flex;
+    align-items: center;
+  }
+}
