@@ -1,33 +1,41 @@
 .Header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  min-height: 100px;
-  width: 100%;
-  padding: 20px 100px;
-  background: antiquewhite;
-  &Right {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    div {
-      padding: 0 20px;
+    min-height: 100px;
+    width: 100%;
+    padding: 20px 100px;
+    background: #ffffff;
+    position: relative;
+    z-index: 99;
+    &Right {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        div {
+            padding: 0 20px;
+        }
     }
-  }
-  &Center {
-    ul {
-      margin: 0px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      li {
-        list-style: none;
-        padding: 0 35px;
-      }
+    &Center {
+        ul {
+            margin: 0px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            li {
+                list-style: none;
+                padding: 0 35px;
+                a {
+                    color: #000;
+                    font-size: 16px;
+                    font-weight: 500;
+                    text-decoration: none;
+                }
+            }
+        }
     }
-  }
-  &Left {
-    display: flex;
-    align-items: center;
-  }
+    &Left {
+        display: flex;
+        align-items: center;
+    }
 }

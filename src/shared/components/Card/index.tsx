@@ -1,24 +1,26 @@
-import React from 'react'
-import { Card } from 'antd';
+import React from "react";
+// import { Card } from "antd";
+import Image from "next/image";
+import Meta from "antd/es/card/Meta";
+const Card = React.lazy(() => import("antd/es/card"));
 
-const { Meta } = Card;
 type IProps = {
-    key:number,
-    src: string,
-    title: string,
-    description: string,
-}
-const AntdCard = ({src,title,description,key}:IProps)=> {
-  return (
-      <Card
-    key={key}
-    hoverable
-    style={{ width: 240 }}
-    cover={<img alt="example" src={src} />}
-  >
-    <Meta title={title} description={description} />
-  </Card>
-  )
-}
+    key: number;
+    src: string;
+    title?: string;
+    description?: string;
+};
+const AntdCard = ({ src, title, description, key }: IProps) => {
+    return (
+        <Card
+            key={key}
+            hoverable
+            style={{ width: 240 }}
+            cover={<Image alt="example" src={src} layout="fill" />}
+        >
+            <Meta title={title} description={description} />
+        </Card>
+    );
+};
 
-export default AntdCard
+export default AntdCard;
