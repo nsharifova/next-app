@@ -1,4 +1,7 @@
 @import "~bootstrap/scss/bootstrap";
 .bodyMain {
-  min-height: 100vh;
+    min-height: 100vh;
+}
+.active {
+    font-weight: 700 !important;
 }

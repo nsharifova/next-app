@@ -1,0 +1,42 @@
+.homeMain {
+    &Top {
+        &Image {
+            height: 700px;
+            img {
+                position: inherit !important;
+            }
+        }
+        &Card {
+            position: absolute;
+            right: 50px;
+            padding: 40px 60px;
+            bottom: 100px;
+            width: 643px;
+            height: 443px;
+            border-radius: 10px;
+            background: #fff3e3;
+            span {
+                color: #333;
+                font-size: 16px;
+                font-weight: 600;
+                letter-spacing: 3px;
+            }
+            h4 {
+                color: var(--Primary, #b88e2f);
+                font-size: 52px;
+                font-weight: 700;
+                line-height: 65px;
+            }
+            p {
+                color: var(--Font-Color, #333);
+                font-size: 18px;
+                font-weight: 500;
+                line-height: 24px;
+            }
+        }
+    }
+    &Range {
+        padding: 30px 100px;
+        text-align: center;
+    }
+}
