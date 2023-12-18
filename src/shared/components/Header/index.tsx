@@ -53,7 +53,9 @@ const Header = () => {
             </div>
             <div className={classes.HeaderRight}>
                 <div>
-                    <ShoppingCard />
+                    <Link className="link" href="/cart">
+                        <ShoppingCard />
+                    </Link>
                 </div>
                 <div>
                     <AlertIcon />

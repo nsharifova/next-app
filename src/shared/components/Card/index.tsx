@@ -5,17 +5,18 @@ import Meta from "antd/es/card/Meta";
 const Card = React.lazy(() => import("antd/es/card"));
 
 type IProps = {
-    key: number;
+    key?: number;
     src: string;
-    title?: string;
+    title: string;
     description?: string;
+    height?: string;
 };
-const AntdCard = ({ src, title, description, key }: IProps) => {
+const AntdCard = ({ src, title, description, key, height }: IProps) => {
     return (
         <Card
             key={key}
             hoverable
-            style={{ width: 240 }}
+            style={{ width: "100%", height: height }}
             cover={<Image alt="example" src={src} layout="fill" />}
         >
             <Meta title={title} description={description} />

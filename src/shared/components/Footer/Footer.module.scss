@@ -1,221 +1,120 @@
 .box__mainFooter {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  background: antiquewhite;
-  padding: 20px 100px;
-  h1 {
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 32px;
-    color: var(--text-color);
-  }
-  ul {
-    margin-top: 37px;
-  }
-  li {
-    font-size: 16px;
-    font-weight: 400;
-    font-family: "Roboto";
-    line-height: 22px;
-    color: var(--dark-text-color);
-    margin-top: 18px;
-    max-width: 235px;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    a {
-      margin-left: 5px;
+    padding: 48px 100px;
+    border-top: 1px solid rgba(0, 0, 0, 0.17);
+    background: #fff;
+    h1 {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 32px;
+        color: var(--text-color);
     }
-    &:hover {
-      color: #fff;
+    span {
+        max-width: 285px;
     }
-  }
-  .box__discoverMobile {
-    display: none;
-  }
+    h4 {
+        color: #9f9f9f;
+
+        font-family: Poppins;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+    ul {
+        margin-top: 37px;
+        padding: 0px;
+        li {
+            list-style: none;
+            line-height: 22px;
+            margin: 20px 0;
+            max-width: 235px;
+            cursor: pointer;
+            color: #000 !important;
+            font-size: 16px;
+            text-decoration: none !important;
+            font-weight: 500;
+            a {
+                line-height: 22px;
+                margin: 20px 0;
+                max-width: 235px;
+                cursor: pointer;
+                color: #000 !important;
+                font-size: 16px;
+                text-decoration: none !important;
+                font-weight: 500;
+            }
+        }
+    }
+    .box__discoverMobile {
+        display: none;
+    }
 }
 .box__secondPartFooter {
-  display: flex;
-  justify-content: space-between;
-  padding-top: 114px;
-  padding-bottom: 18px;
-  position: relative;
-
-  h1 {
-    font-size: 16px;
-    font-weight: 400;
-    font-family: "Roboto";
-    line-height: 22px;
-    color: #a2a2a2;
-  }
-  .box__reserved {
-    display: none;
-  }
-  .box__redBox {
     display: flex;
-  }
-  .box__crocusoft {
-    position: absolute;
-    right: 50px;
-  }
-  .box__redCrocusoft {
-    position: absolute;
-    right: -28px;
-    color: var(--main-orange);
-  }
-}
-.box__topSide {
-  border-top: 1px solid #4d4e50;
-  .box__footerLogo {
-    padding-top: 20px;
-    display: flex;
-    justify-content: center;
-    img {
-      width: 136px !important;
-      height: 23px !important;
-    }
-  }
-  .box__footerHeading {
-    font-size: 28px;
-    text-align: center;
-    padding-top: 46px;
-    line-height: 36px;
-    font-weight: 700;
-    font-family: "BeVietnam";
-  }
-  .box__subscribe {
-    display: flex;
-    justify-content: center;
-    padding-top: 20px;
-  }
-  .box__socialIcons {
-    display: flex;
-    justify-content: center;
-    padding-top: 80px;
-    div {
-      padding-left: 24.6px;
-      cursor: pointer;
-      &:hover {
-        svg {
-          margin-top: -10px;
-        }
-      }
-    }
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  .box__mainFooter {
-    margin-top: 100px;
-    padding-left: 20px;
-
-    .box__aboutUs {
-      margin-left: 15px;
-    }
-
-    .box__discoverMobile {
-      display: block;
-      h1 {
-        margin: 0px;
-        padding-top: 40px;
-      }
-    }
-    .box__discoverDesktop {
-      display: none;
-    }
-    h1 {
-      font-size: 18px;
-      line-height: 24px;
-      margin-top: 40px;
-    }
-    ul {
-      margin-top: 37px;
-    }
-    li {
-      font-size: 14px;
-      font-weight: 400;
-      line-height: 18px;
-      margin-top: 18px;
-      max-width: 152px;
-      padding-right: 18px;
-    }
-  }
-  .box__secondPartFooter {
-    padding: 114px 20px 18px 20px;
-    position: relative !important;
-
-    h1 {
-      font-size: 14px !important;
-      font-weight: 400;
-      line-height: 18px !important;
-    }
-    .box__reserved {
-      display: block !important;
-    }
-    .box__redBox {
-      display: flex !important;
-    }
-    .box__crocusoft {
-      position: absolute !important;
-      right: 75px !important;
-    }
-    .box__redCrocusoft {
-      position: absolute !important;
-      right: 3px !important;
-    }
-  }
-}
-
-@media only screen and (max-width: 1025px) {
-  .box__mainFooter {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 100px;
-    padding-left: 0px;
-
-    .box__aboutUs {
-      margin-left: 15px;
-    }
-
-    h1 {
-      font-size: 16px;
-      line-height: 24px;
-      margin-top: 40px;
-    }
-    ul {
-      margin-top: 37px;
-    }
-    li {
-      font-size: 14px;
-      font-weight: 400;
-      line-height: 18px;
-      margin-top: 18px;
-      max-width: 152px;
-      padding-right: 18px;
-    }
-  }
-  .box__secondPartFooter {
+    justify-content: space-between;
+    padding-top: 114px;
+    padding-bottom: 18px;
     position: relative;
 
     h1 {
-      font-size: 16px;
-      font-weight: 400;
-      line-height: 22px;
+        font-size: 16px;
+        font-weight: 400;
+        font-family: "Roboto";
+        line-height: 22px;
+        color: #a2a2a2;
     }
     .box__reserved {
-      display: none;
+        display: none;
     }
     .box__redBox {
-      display: flex;
+        display: flex;
     }
     .box__crocusoft {
-      position: absolute;
-      right: 50px;
+        position: absolute;
+        right: 50px;
     }
     .box__redCrocusoft {
-      position: absolute;
-      right: -23px;
+        position: absolute;
+        right: -28px;
+        color: var(--main-orange);
     }
-  }
+}
+.box__topSide {
+    border-top: 1px solid #4d4e50;
+    .box__footerLogo {
+        padding-top: 20px;
+        display: flex;
+        justify-content: center;
+        img {
+            width: 136px !important;
+            height: 23px !important;
+        }
+    }
+    .box__footerHeading {
+        font-size: 28px;
+        text-align: center;
+        padding-top: 46px;
+        line-height: 36px;
+        font-weight: 700;
+        font-family: "BeVietnam";
+    }
+    .box__subscribe {
+        display: flex;
+        justify-content: center;
+        padding-top: 20px;
+    }
+    .box__socialIcons {
+        display: flex;
+        justify-content: center;
+        padding-top: 80px;
+        div {
+            padding-left: 24.6px;
+            cursor: pointer;
+            &:hover {
+                svg {
+                    margin-top: -10px;
+                }
+            }
+        }
+    }
 }

@@ -1,0 +1,40 @@
+.sectionMain {
+    background: url("/images/backgroundPage.png"),
+        lightgray 50% / cover no-repeat;
+    height: 316px;
+    padding-top: 60px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    text-align: center;
+    &Logo {
+        width: 77px;
+        height: 77px;
+    }
+    &Title {
+        color: #000;
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+    &Inner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        a {
+            color: #000;
+            font-weight: 700;
+            text-decoration: none;
+        }
+        p {
+            margin-bottom: 0px;
+            color: #000;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;
+        }
+    }
+}
