@@ -49,6 +49,7 @@ export default function RootLayout({
             </head>
             <body className={inter.className}>
                 <Header />
+
                 <Suspense fallback={<p>Loading...</p>}>
                     <div className="w-100 bodyMain">{children}</div>
                 </Suspense>

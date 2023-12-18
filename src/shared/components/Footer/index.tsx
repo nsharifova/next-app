@@ -1,130 +1,118 @@
-
-'use client'
-import React, { useState } from 'react'
-import Image from 'next/image';
-import Link from 'next/link';
-import { AlertIcon, HeartIcon, SearchIcon, ShoppingCard } from '@/shared/components/Icons';
-import classes from './Footer.module.scss'
+"use client";
+import React, { useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import {
+    AlertIcon,
+    HeartIcon,
+    SearchIcon,
+    ShoppingCard,
+} from "@/shared/components/Icons";
+import classes from "./Footer.module.scss";
+import { Col, Divider, Row, Typography } from "antd";
 
 const Footer = () => {
- const [show, setShow] = useState(false);
+    const [show, setShow] = useState(false);
 
-  const handleToggleShow = () => {
-    setShow((prevShow) => !prevShow);
-  };
-  return (
+    const handleToggleShow = () => {
+        setShow((prevShow) => !prevShow);
+    };
+    return (
         <div>
-          <div className={classes.box__mainFooter}>
-            <div>
-              <h1>Contact us</h1>
-              <ul>
-                <li>
-                  Tel: <a href="tel:+994124971333">+994124971333</a>
-                </li>
-                <li>
-                  Fax: <a href="tel: +994124971091">+994124971091</a>
-                </li>
-                <li>
-                  <a
-                    href="mailto:csrplatform@amchamaz.org"
-                    style={{
-                      marginLeft: "0px",
-                      color: "#1FC4DA",
-                      textDecoration: "underline",
-                    }}
-                  >
-                    csrplatform@amchamaz.org
-                  </a>
-                </li>
-                <li>90A Nizami street, Landmark III, 13th floor</li>
-              </ul>
-            </div>
-            <div className={classes.box__aboutUs}>
-              <h1>About us</h1>
-              <ul>
-                <Link href="/about">
-                  <li>About AmCham CSR Platform</li>
-                </Link>
-                <Link href="/ourTeam">
-                  <li>Our team</li>
-                </Link>
-                <Link href="/ourValues">
-                  <li>Our values</li>
-                </Link>
-              </ul>
-              <div className={classes.box__discoverMobile}>
-                <h1>Discover</h1>
-                <ul>
-                  <Link href="/explore-projects">
-                    <li>Projects</li>
-                  </Link>
-                  <Link href="partners">
-                    <li>Affiliates</li>
-                  </Link>
+            <div className={classes.box__mainFooter}>
+                <Row>
+                    <Col flex={2}>
+                        <div>
+                            <h1>Furnito.</h1>
+                            <span>
+                                400 University Drive Suite 200 Coral Gables, FL
+                                33134 USA
+                            </span>
+                        </div>
+                    </Col>
+                    <Col flex={3}>
+                        <Row>
+                            <Col span={8}>
+                                {" "}
+                                <div className={classes.box__aboutUs}>
+                                    <h4>Links</h4>
+                                    <ul>
+                                        <li>
+                                            <Link href="/about">About</Link>
+                                        </li>
+                                        <li>
+                                            <Link href="/products">
+                                                Products
+                                            </Link>
+                                        </li>
+                                    </ul>
+                                    <div
+                                        className={classes.box__discoverMobile}
+                                    >
+                                        <h1>Help</h1>
+                                        <ul>
+                                            <Link href="/explore-projects">
+                                                <li>Payment Options</li>
+                                            </Link>
+                                            <Link href="partners">
+                                                <li>Returns</li>
+                                            </Link>
 
-                  <Link href="/contributors">
-                    <li>Contributors</li>
-                  </Link>
-                </ul>
-              </div>
-            </div>
+                                            <Link href="/contributors">
+                                                <li>Privacy</li>
+                                            </Link>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </Col>
+                            <Col span={8}>
+                                <div className={classes.box__discoverDesktop}>
+                                    <h4>Newsletter</h4>
+                                    <ul>
+                                        <li>
+                                            {" "}
+                                            <Link href="/explore-projects">
+                                                {" "}
+                                            </Link>
+                                            Projects
+                                        </li>
 
-            <div className={classes.box__discoverDesktop}>
-              <h1>Discover</h1>
-              <ul>
-                <Link href="/explore-projects">
-                  <li>Projects</li>
-                </Link>
-                <Link href="partners">
-                  <li>Affiliates</li>
-                </Link>
+                                        <li>
+                                            <Link href="partners">
+                                                Affiliates
+                                            </Link>
+                                        </li>
 
-                <Link href="/contributors">
-                  <li>Contributors</li>
-                </Link>
-              </ul>
-            </div>
-            <div>
-              <h1>Other links</h1>
-              <ul>
-                <Link href="/news">
-                  <li>News</li>
-                </Link>
+                                        <li>
+                                            <Link href="/contributors">
+                                                Contributors
+                                            </Link>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </Col>
+                            <Col span={8}>
+                                <div>
+                                    <h4>Other links</h4>
+                                    <ul>
+                                        <li>
+                                            <Link href="/news">News</Link>
+                                        </li>
 
-                <li>Video tutoriol</li>
-                <li>
-                  <a
-                    href="https://amcham.az"
-                    target="_blank"
-                    style={{ marginLeft: "0px", color: "#1FC4DA" }}
-                  >
-                    AmCham website
-                  </a>
-                </li>
-              </ul>
+                                        <li>Video tutoriol</li>
+                                    </ul>
+                                </div>
+                            </Col>
+                        </Row>
+                    </Col>
+                </Row>
+                <Divider />
+                <Typography.Text strong>
+                    2023 furino. All rights reverved
+                </Typography.Text>
             </div>
-            <div>
-              <h1>Policies</h1>
-              <ul>
-                {/* <Link href="/communityGuidlines">
-                  <li>Community guidlines</li>
-                </Link> */}
-                <Link href="/termsOfUse">
-                  <li>Term of use</li>
-                </Link>
-                <Link href="privacyPolicy">
-                  <li>GDPR</li>
-                </Link>
-                <Link href="/legal">
-                  <li>Code of Conduct</li>
-                </Link>
-              </ul>
-            </div>
-          </div>
-       
         </div>
-  );
+    );
+};
 
-}
-
-export default Footer
+export default Footer;
