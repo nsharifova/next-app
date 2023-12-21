@@ -4,7 +4,8 @@ import { Roboto } from "@next/font/google";
 import "./globals.css";
 import "./globals.scss";
 import { Suspense } from "react";
-import Loading from "./loading";
+import { Provider } from "react-redux";
+import { store } from "@/redux/store";
 const inter = Roboto({
     weight: ["400", "700"],
     style: ["normal", "italic"],
@@ -45,15 +46,17 @@ export default function RootLayout({
                 <meta name="msapplication-TileColor" content="#da532c" />
                 <meta name="theme-color" content="#ffffff" />
 
-                <title>Next App</title>
+                <title>Furnito</title>
             </head>
             <body className={inter.className}>
-                <Header />
+                <Provider store={store}>
+                    <Header />
 
-                <Suspense fallback={<p>Loading...</p>}>
-                    <div className="w-100 bodyMain">{children}</div>
-                </Suspense>
-                <Footer />
+                    <Suspense fallback={<p>Loading...</p>}>
+                        <div className="w-100 bodyMain">{children}</div>
+                    </Suspense>
+                    <Footer />
+                </Provider>
             </body>
         </html>
     );

@@ -5,3 +5,10 @@
 .active {
     font-weight: 700 !important;
 }
+.ant-table-wrapper .ant-table-pagination-right {
+    justify-content: flex-start !important;
+}
+.ant-table-thead,
+.ant-table-wrapper .ant-table-thead > tr > th {
+    background: #f9f1e7 !important;
+}
