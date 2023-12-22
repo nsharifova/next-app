@@ -71,7 +71,7 @@ const Index = () => {
             <div className={classes.AddToCartBtn}>Add To Cart</div>
           </div>
         </div>
-      </div>
+      </div> 
 
       {/* <div className={classes.ProductInformation}>
         <Tabs />
