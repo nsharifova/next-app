@@ -1,0 +1,177 @@
+.ProductDetailPage {
+  max-width: 1440px;
+  margin: 0 auto;
+
+  .ProductDetails {
+    display: flex;
+    column-gap: 100px;
+
+    &Image {
+      width: 50%;
+      max-height: 400px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &Properties {
+      width: 50%;
+
+      &Name {
+        font-size: 42px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+
+      &Price {
+        color: #9f9f9f;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin-bottom: 14px;
+      }
+
+      &Rating {
+        display: flex;
+        margin-bottom: 14px;
+
+        &Stars {
+          padding-right: 22px;
+        }
+
+        &Review {
+          color: #9f9f9f;
+          font-size: 13px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          padding-left: 22px;
+          border-left: 1px solid #9f9f9f;
+        }
+      }
+
+      &Information {
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        max-width: 422px;
+        width: 100%;
+        margin-bottom: 22px;
+      }
+
+      &Size {
+        margin-bottom: 18px;
+
+        &Title {
+          color: #9f9f9f;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          margin-bottom: 12px;
+        }
+
+        &Box {
+          display: flex;
+          column-gap: 16px;
+
+          &Item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            width: 30px;
+            height: 30px;
+            border-radius: 5px;
+            background: #f9f1e7;
+            font-size: 13px;
+            font-style: normal;
+            font-weight: 400;
+
+            &:first-child {
+              color: white;
+              background: #b88e2f;
+            }
+          }
+        }
+      }
+
+      &Colors {
+        margin-bottom: 32px;
+
+        &Title {
+          color: #9f9f9f;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          margin-bottom: 12px;
+        }
+
+        &Box {
+          display: flex;
+          column-gap: 16px;
+
+          &Item {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+
+            &:nth-child(1) {
+              background: #816dfa;
+            }
+
+            &:nth-child(2) {
+              background: #000;
+            }
+
+            &:nth-child(3) {
+              background: #b88e2f;
+            }
+          }
+        }
+      }
+
+      .AddToCart {
+        display: flex;
+        column-gap: 18px;
+
+        &Count {
+          display: flex;
+          border: 1px solid #000;
+          border-radius: 15px;
+
+          &Increment {
+            padding: 17px 20px;
+            cursor: pointer;
+          }
+
+          &Input {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+
+          &Decrement {
+            padding: 17px 20px;
+            cursor: pointer;
+          }
+        }
+
+        &Btn {
+          width: fit-content;
+          padding: 17px 48px;
+          border: 1px solid #000;
+          border-radius: 15px;
+        }
+      }
+    }
+  }
+}
