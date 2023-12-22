@@ -1,6 +1,9 @@
+export { default as Advantages } from "./Advantages";
 export { default as Header } from "./Header";
 export { default as Footer } from "./Footer";
 export { default as Card } from "./Card";
+export { default as ProductItem } from "./ProductItem";
 export { default as RenderIf } from "./RenderIf";
 export { default as Title } from "./Title";
 export { default as TopPage } from "./TopPage";
+export { default as Tabs } from "./Tabs";
