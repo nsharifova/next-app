@@ -10,7 +10,9 @@
     "svgr": "npx @svgr/cli icons -d src/components/Icons --icon --replace-attr-values \"#89898A=currentColor,  #424460=currentColor, #34A9FC=currentColor, #1FC4DA=currentColor,\""
   },
   "dependencies": {
+    "@ant-design/icons": "^5.2.6",
     "@next/font": "^14.0.4",
+    "@reduxjs/toolkit": "^2.0.1",
     "@types/node": "20.10.4",
     "@types/react": "18.2.42",
     "@types/react-dom": "18.2.17",
@@ -21,7 +23,10 @@
     "next": "^14.0.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-hook-form": "^7.49.2",
+    "react-redux": "^9.0.4",
     "react-slick": "^0.29.0",
+    "redux-persist": "^6.0.0",
     "sass": "^1.69.5",
     "slick-carousel": "^1.8.1",
     "swiper": "^11.0.5",
