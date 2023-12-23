@@ -1,0 +1,94 @@
+.Products {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(250px, 1fr));
+  grid-column-gap: 32px;
+  padding-inline: 100px;
+  grid-row-gap: 40px;
+  margin-block: 60px;
+
+  &Item {
+    position: relative;
+
+    &Image {
+      max-height: 300px;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    &Content {
+      padding-inline: 16px;
+      padding-block: 16px 30px;
+      background: #f4f5f7;
+
+      &Title {
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 120%;
+
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      &Description {
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 150%;
+
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      &Price {
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 150%;
+      }
+    }
+
+    .ProductOverlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+
+      background-color: rgba(0, 0, 0, 0.5);
+      display: none;
+
+      .AddToCard {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: fit-content;
+        padding: 12px 50px;
+        background: white;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 150%;
+        color: #b88e2f;
+        cursor: pointer;
+      }
+    }
+
+    &:hover .ProductOverlay {
+      display: flex;
+    }
+  }
+}
