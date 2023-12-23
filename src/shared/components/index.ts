@@ -4,3 +4,4 @@ export { default as Card } from "./Card";
 export { default as RenderIf } from "./RenderIf";
 export { default as Title } from "./Title";
 export { default as TopPage } from "./TopPage";
+export { default as Input } from "./Input";

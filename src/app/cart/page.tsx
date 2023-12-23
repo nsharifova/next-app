@@ -20,6 +20,7 @@ import { ColumnsType } from "antd/es/table";
 import { data } from "./data";
 import { removeItemFromCart } from "@/redux/features/cart/cartSlice";
 import { AppDispatch, RootState } from "@/redux/store";
+import { DeleteOutlined } from "@ant-design/icons";
 const columns: ColumnsType<DataType> = [
     {
         title: "Product",
@@ -44,6 +45,7 @@ const columns: ColumnsType<DataType> = [
         render: (_, record) => (
             <Space size="middle">
                 <a>Invite {record.name}</a>
+                <DeleteOutlined />
             </Space>
         ),
     },

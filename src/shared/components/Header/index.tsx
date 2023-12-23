@@ -32,6 +32,17 @@ const Header = () => {
                         <Link
                             scroll={true}
                             className={`link ${
+                                pathname === "/" ? "active" : ""
+                            }`}
+                            href="/"
+                        >
+                            Home
+                        </Link>
+                    </li>
+                    <li>
+                        <Link
+                            scroll={true}
+                            className={`link ${
                                 pathname === "/about" ? "active" : ""
                             }`}
                             href="/about"
@@ -39,7 +50,7 @@ const Header = () => {
                             About
                         </Link>
                     </li>
-                    <li>
+                    {/* <li>
                         <Link
                             className={`link ${
                                 pathname === "/products" ? "active" : ""
@@ -47,6 +58,26 @@ const Header = () => {
                             href="/products"
                         >
                             Products
+                        </Link>
+                    </li> */}
+                    <li>
+                        <Link
+                            className={`link ${
+                                pathname === "/shop" ? "active" : ""
+                            }`}
+                            href="/shop"
+                        >
+                            Shop
+                        </Link>
+                    </li>
+                    <li>
+                        <Link
+                            className={`link ${
+                                pathname === "/contact" ? "active" : ""
+                            }`}
+                            href="/contact"
+                        >
+                            Contact
                         </Link>
                     </li>
                 </ul>
