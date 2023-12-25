@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Tabs } from "@/shared/components";
+import { ProductItem } from "@/shared/components";
 
 import classes from "./ProductDetail.module.scss";
 
@@ -19,7 +19,7 @@ const Index = () => {
             Rs. 250,000.00
           </div>
           <div className={classes.ProductDetailsPropertiesRating}>
-            <div className={classes.ProductDetailsPropertiesRatingStars}></div>
+            {/* <div className={classes.ProductDetailsPropertiesRatingStars}></div> */}
             <div className={classes.ProductDetailsPropertiesRatingReview}>
               5 Customer Review
             </div>
@@ -71,11 +71,14 @@ const Index = () => {
             <div className={classes.AddToCartBtn}>Add To Cart</div>
           </div>
         </div>
-      </div> 
+      </div>
 
-      {/* <div className={classes.ProductInformation}>
-        <Tabs />
-      </div> */}
+      <div className={classes.RelatedSection}>
+        <div className={classes.RelatedSectionTitle}>Related Products</div>
+        <div className={classes.RelatedSectionProducts}>
+          <ProductItem />
+        </div>
+      </div>
     </div>
   );
 };

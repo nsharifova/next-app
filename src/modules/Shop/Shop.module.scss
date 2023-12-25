@@ -104,46 +104,4 @@
       }
     }
   }
-
-  &Advantages {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    column-gap: 60px;
-    padding: 100px 60px;
-    background: #faf3ea;
-
-    &Section {
-      display: flex;
-      align-items: center;
-      column-gap: 10px;
-
-      &Icon {
-        svg {
-          font-size: 60px;
-        }
-      }
-
-      &Content {
-        display: flex;
-        flex-direction: column;
-
-        &Title {
-          font-size: 25px;
-          font-style: normal;
-          font-weight: 600;
-          line-height: 150%;
-        }
-
-        &Description {
-          color: #898989;
-          font-family: Poppins;
-          font-size: 20px;
-          font-style: normal;
-          font-weight: 500;
-          line-height: 150%;
-        }
-      }
-    }
-  }
 }
