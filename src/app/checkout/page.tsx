@@ -12,7 +12,7 @@ import {
     Space,
     Typography,
 } from "antd";
-import { Input, TopPage } from "@/shared/components";
+import { Advantages, Input, TopPage } from "@/shared/components";
 
 const Checkout = () => {
     const [value, setValue] = useState(1);
@@ -165,6 +165,7 @@ const Checkout = () => {
                     </Col>
                 </Row>
             </div>
+            <Advantages />
         </div>
     );
 };
