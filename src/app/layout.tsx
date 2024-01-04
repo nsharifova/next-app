@@ -6,6 +6,7 @@ import "./globals.scss";
 import { Suspense } from "react";
 import { Provider } from "react-redux";
 import { store } from "@/redux/store";
+import Loading from "./loading";
 const inter = Roboto({
     weight: ["400", "700"],
     style: ["normal", "italic"],
@@ -52,7 +53,7 @@ export default function RootLayout({
                 <Provider store={store}>
                     <Header />
 
-                    <Suspense fallback={<p>Loading...</p>}>
+                    <Suspense fallback={<Loading />}>
                         <div className="w-100 bodyMain">{children}</div>
                     </Suspense>
                     <Footer />

@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { TopPage } from "@/shared/components";
+import { Advantages, TopPage } from "@/shared/components";
 import classes from "./Cart.module.scss";
 import {
     Button,
@@ -110,6 +110,7 @@ const Cart = () => {
                     </Col>
                 </Row>
             </div>
+            <Advantages />
         </div>
     );
 };

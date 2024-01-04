@@ -46,7 +46,7 @@ const FormInput: React.FC<IProps> = ({
                     className={`w-100 mb-3 form-control input-style ${className} ${
                         isErrorContain ? "error-input" : ""
                     }`}
-                    placeholder={placeholder}
+                    placeholder={placeholder || label}
                     {...props}
                     // {...field}
                     disabled={disabled}
