@@ -1,23 +1,35 @@
-import { Card } from "@/shared/components";
 import React from "react";
-type Post = {
-    id: number;
-    title: string;
-};
-// const getPosts = async (): Promise<Post[]> => {
-//   const data = await fetch("https://fakestoreapi.com/products");
-//   const posts = await data.json();
-//   return posts;
-// };
-export default async function Products() {
-    // const posts = await getPosts();
+import Link from "next/link";
 
-    return (
-        <div>
-            Products
-            {/* {posts?.map((post) => (
-          <Card key={post.id} title={post.title} src="" description='' />
-        ))} */}
-        </div>
-    );
+import { ProductsType } from "./model";
+import { Card } from "antd";
+import classes from "./Products.module.scss";
+
+const getPosts = async () => {
+  try {
+    const res = await fetch("https://api.b-e.az/best-seller");
+
+    if (!res.ok) {
+      throw new Error("Failed to fetch data");
+    }
+
+    return await res.json();
+  } catch (error) {}
+};
+
+export default async function Products() {
+  const products: ProductsType[] | null = await getPosts();
+
+  return (
+    <div className={classes.Products}>
+      {products?.map((product: ProductsType) => (
+        <Link href={`/product-details/${product?.slug}`}>
+          <div className={classes.ProductsItem} key={product.id}>
+            <img src={product.image} alt={product.name} />
+            <div>{product?.name}</div>
+          </div>
+        </Link>
+      ))}
+    </div>
+  );
 }

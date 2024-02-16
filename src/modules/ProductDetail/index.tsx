@@ -3,25 +3,28 @@ import React from "react";
 import { ProductItem } from "@/shared/components";
 
 import classes from "./ProductDetail.module.scss";
+import { IProps } from "./model";
 
-const Index = () => {
+const Index: React.FC<IProps> = ({ productDetails }) => {
+  console.log(productDetails, "productDetails");
+
   return (
     <div className={classes.ProductDetailPage}>
       <div className={classes.ProductDetails}>
         <div className={classes.ProductDetailsImage}>
-          <img src="/images/shop-product-1.png" alt="" />
+          <img src={productDetails?.images?.[0]} alt={productDetails?.slug} />
         </div>
         <div className={classes.ProductDetailsProperties}>
           <div className={classes.ProductDetailsPropertiesName}>
-            Asgaard sofa
+            {productDetails?.title}
           </div>
           <div className={classes.ProductDetailsPropertiesPrice}>
-            Rs. 250,000.00
+            {productDetails?.price}
           </div>
           <div className={classes.ProductDetailsPropertiesRating}>
             {/* <div className={classes.ProductDetailsPropertiesRatingStars}></div> */}
             <div className={classes.ProductDetailsPropertiesRatingReview}>
-              5 Customer Review
+              {productDetails?.review_count} Customer Review
             </div>
           </div>
           <div className={classes.ProductDetailsPropertiesInformation}>
