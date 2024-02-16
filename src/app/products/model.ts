@@ -1,0 +1,20 @@
+export type ProductsType = {
+  id: number;
+  name: string;
+  slug: string;
+  price: string;
+  discount: string;
+  perMonth: string;
+  quantity: number;
+  reviewCount: number;
+  published: string;
+  rate: null;
+  image: string;
+  brand: string;
+  color: number;
+  categories: number[];
+  properties: number[];
+  is_basket: boolean;
+  is_favorite: boolean;
+  is_compare: boolean;
+};

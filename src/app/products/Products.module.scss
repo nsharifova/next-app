@@ -1,0 +1,26 @@
+.Products {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(200px, 1fr));
+  gap: 32px;
+
+  a {
+    text-decoration: none;
+    color: unset;
+  }
+
+  &Item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    border: 1px solid black;
+    padding: 20px;
+
+    img {
+      object-fit: cover;
+      height: 300px;
+    }
+  }
+}
