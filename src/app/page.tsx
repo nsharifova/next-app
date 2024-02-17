@@ -9,6 +9,7 @@ import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { data } from "./data/data";
+import Products from "./products/page";
 
 export interface RoomTypes {
     id: string;
@@ -94,6 +95,7 @@ const Page = () => {
                     </Row>
                 </Space>
             </div>
+            {/* <Products /> */}
             <div className={classes.homeMainInspiration}>
                 <Row>
                     <Col span={8}>
