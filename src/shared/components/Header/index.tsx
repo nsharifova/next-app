@@ -9,9 +9,15 @@ import {
     ShoppingCard,
 } from "@/shared/components/Icons";
 import classes from "./Header.module.scss";
+import CardSideBar from "../CardSideBar";
+import { ModalType } from "./models";
 
 const Header = () => {
     const pathname = usePathname();
+    const [modalType, setModalType] = React.useState<ModalType>(
+        ModalType.NOTHING
+    );
+    console.log(modalType);
 
     return (
         <div className={classes.Header}>
@@ -50,7 +56,7 @@ const Header = () => {
                             About
                         </Link>
                     </li>
-                    {/* <li>
+                    <li>
                         <Link
                             className={`link ${
                                 pathname === "/products" ? "active" : ""
@@ -59,7 +65,7 @@ const Header = () => {
                         >
                             Products
                         </Link>
-                    </li> */}
+                    </li>
                     <li>
                         <Link
                             className={`link ${
@@ -83,10 +89,10 @@ const Header = () => {
                 </ul>
             </div>
             <div className={classes.HeaderRight}>
-                <div>
-                    <Link className="link" href="/cart">
-                        <ShoppingCard />
-                    </Link>
+                <div onClick={() => setModalType(ModalType.SIDEBAR)}>
+                    {/* <Link className="link" href="/cart"> */}
+                    <ShoppingCard />
+                    {/* </Link> */}
                 </div>
                 <div>
                     <AlertIcon />
@@ -98,6 +104,10 @@ const Header = () => {
                     <SearchIcon />
                 </div>
             </div>
+            <CardSideBar
+                show={modalType === ModalType.SIDEBAR}
+                onHide={() => setModalType(ModalType.NOTHING)}
+            />
         </div>
     );
 };

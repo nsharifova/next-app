@@ -7,9 +7,16 @@ type ProductsItem = {
     name: string;
     description: string;
     price: string;
+    handleClick: (event: React.MouseEvent<HTMLDivElement>) => void;
 };
 
-const Index = ({ image, name, description, price }: ProductsItem) => {
+const Index = ({
+    image,
+    name,
+    description,
+    price,
+    handleClick,
+}: ProductsItem) => {
     return (
         <>
             {/* {productData?.map((item) => ( */}
@@ -31,7 +38,9 @@ const Index = ({ image, name, description, price }: ProductsItem) => {
                 </div>
 
                 <div className={classes.ProductOverlay}>
-                    <div className={classes.AddToCard}>Add to cart</div>
+                    <div onClick={handleClick} className={classes.AddToCard}>
+                        Add to cart
+                    </div>
                 </div>
             </div>
             {/* ))} */}

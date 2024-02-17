@@ -1,44 +1,34 @@
-import { Card } from "@/shared/components";
 import React from "react";
-type Post = {
-    id: number;
-    title: string;
-};
-// const getPosts = async (): Promise<Post[]> => {
-//     const data = await fetch("https://fakestoreapi.com/products");
-//     const posts = await data.json();
-//     return posts;
-// };
-async function getProducts() {
+import Link from "next/link";
+import { ProductsType } from "./model";
+import { Card } from "antd";
+import classes from "./Products.module.scss";
+
+const getPosts = async () => {
     try {
-        const res = await fetch(`https://fakestoreapi.com/products`);
+        const res = await fetch("https://api.b-e.az/best-seller");
+
         if (!res.ok) {
-            throw new Error("Fail");
+            throw new Error("Failed to fetch data");
         }
+
         return await res.json();
-    } catch (err) {
-        console.log(err);
-    }
-}
+    } catch (error) {}
+};
 
 export default async function Products() {
-    const productData: any | null = await getProducts();
+    const products: ProductsType[] | null = await getPosts();
 
     return (
-        <div>
-            Products
-            <div className="row">
-                {productData?.map((post: any) => (
-                    <div key={post?.id} className="col-lg-3">
-                        <Card
-                            key={post?.id}
-                            title={post?.title}
-                            src={post?.image}
-                            description={post?.description}
-                        />
+        <div className={classes.Products}>
+            {products?.map((product: ProductsType) => (
+                <Link key={product?.slug} href={`/products/${product?.slug}`}>
+                    <div className={classes.ProductsItem} key={product.id}>
+                        <img src={product.image} alt={product.name} />
+                        <div>{product?.name}</div>
                     </div>
-                ))}
-            </div>
+                </Link>
+            ))}
         </div>
     );
 }
