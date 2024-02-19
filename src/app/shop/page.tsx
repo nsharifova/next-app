@@ -1,5 +1,6 @@
 import Shop from "@/modules/Shop";
 import React from "react";
+import { ProductsType } from "../products/model";
 async function getProducts() {
     try {
         const res = await fetch(`https://api.b-e.az/best-seller`);
@@ -12,6 +13,6 @@ async function getProducts() {
     }
 }
 export default async function ShopPage() {
-    const productData: any | null = await getProducts();
+    const productData: ProductsType | null = await getProducts();
     return <Shop productData={productData} />;
 }

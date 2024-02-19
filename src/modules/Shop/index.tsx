@@ -1,26 +1,13 @@
 "use client";
 import { Advantages, ProductItem, TopPage } from "@/shared/components";
 import classes from "./Shop.module.scss";
+import { useAddToCartMutation } from "@/redux/api/product";
+import { ProductsType } from "@/app/products/model";
+import { IProps } from "./models";
 
-const Index = ({ productData }: any) => {
-    console.log(productData);
-    const handleAdd = (event: any, slug: string, quantity: number) => {
-        event.preventDefault();
-        fetch("https://api.b-e.az/addbasket", {
-            method: "POST",
-            headers: {
-                token: "test",
-            },
-            body: JSON.stringify({ product_slug: slug, quantity: quantity }),
-        })
-            .then((response) => response.json())
-            .then((data) => {
-                console.log(data);
-            })
-            .catch((error) => {
-                console.error(error);
-            });
-    };
+const Index: React.FC<IProps> = ({ productData }: any) => {
+    const [addToCard] = useAddToCartMutation();
+
     return (
         <div className={classes.ShopPage}>
             <TopPage title="Shop" name="Shop" />
@@ -34,8 +21,11 @@ const Index = ({ productData }: any) => {
                         name={c?.name}
                         price={c?.price}
                         image={c?.image}
-                        handleClick={(event: any) =>
-                            handleAdd(event, c?.slug, c?.quantity)
+                        handleClick={() =>
+                            addToCard({
+                                product_slug: c?.slug,
+                                quantity: c?.quantity,
+                            })
                         }
                         description={c?.description}
                     />
